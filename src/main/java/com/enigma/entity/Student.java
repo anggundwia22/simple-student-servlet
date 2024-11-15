@@ -1,27 +1,37 @@
 package com.enigma.entity;
 
 public class Student {
-    private String username;
-    private String password;
+    private String studentId;
+    private String studentName;
+    private String department;
+    private int marks;
 
-    public Student(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public Student(String studentId, String studentName, String department, int marks) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.department = department;
+        this.marks = marks;
     }
 
-    public String getUsername() {
-        return username;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public int getMarks() {
+        return marks;
+    }
+
+    public boolean isPass() {
+        return marks >= 40;
     }
 }
+
+
